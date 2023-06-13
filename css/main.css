@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+body {
+  background-image: url(/images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: var(--pale-blue);
+  background-position: center top 0;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body p {
+  font-size: 16px;
+}
+
+main .card {
+  width: 450px;
+  height: 697px;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  margin-top: 3rem;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+main .card p {
+  text-align: center;
+  color: #717fa6;
+}
+
+main .card p.desc {
+  line-height: 2;
+  padding: 0 3rem 0 3rem;
+}
+
+main .card .product {
+  width: 354px;
+  height: 90px;
+  background-color: var(--very-pale-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+main .card .product .text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 5rem;
+}
+
+main .card button.payment-btn {
+    width: 354px;
+    height: 50px;
+    color: white;
+    font-weight: 900;
+    background: var(--bright-blue);
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+main .card button.cancel-btn {
+    color: #717FA6;
+    font-weight: 900;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding-bottom: 2rem;
+}
+
+/* mobile design area */
+
+@media (max-width: 425px) {
+
+  main .card {
+    width: 327px;
+    height: 567px;
+    gap: 1rem;
+    font-size: 15px;
+    
+  }
+
+  main .card p.desc {
+    line-height: 1.1;
+  }
+
+  main .card .product {
+    width: 300px;
+    height: 81px;
+    padding-left: 2rem;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  main .card .product a {
+    padding-right: 1rem;
+  }
+  
+  main .card .product .text {
+    padding-left: 1rem;
+  }
+
+  main .card button.payment-btn {
+    width: 280px;
+    height: 50px;
+  }
+
+}
